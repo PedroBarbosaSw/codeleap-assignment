@@ -1,0 +1,9 @@
+.header-ROOT {
+   top: 0;
+   background-color: #000;
+   color: #FFF;
+   padding: 18px;
+}
+.header-ROOT h2 {
+   font-size: 20px;
+}
