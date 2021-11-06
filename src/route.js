@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-   BrowserRouter as Routes,
+   BrowserRouter as Router,
    Switch,
    Route
 } from 'react-router-dom';
@@ -13,6 +13,9 @@ export default function RouteComponent() {
    return (
       <Router>
          <Switch>
+            <PrivateRoute path="/home">
+               <Main />
+            </PrivateRoute>
             <Route path="/">
                <SignUp />
             </Route>
