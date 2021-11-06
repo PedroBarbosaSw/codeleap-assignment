@@ -1,0 +1,54 @@
+.signup-ROOT {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #DDDDDD;
+}
+
+.signup-form {
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   max-width: 700px;
+   align-items: flex-start;
+   box-sizing: border-box;
+   border: 1px solid #CCCCCC;
+   border-radius: 3px;
+   padding: 20px;
+   background: #FFFFFF;
+}
+.signup-form .signup-form-text{
+   width: 100%;
+}
+.signup-form h2 {
+   font-weight: bolder;
+}
+.signup-form h4 {
+   margin-top: 30px;
+   font-weight: bolder;
+}
+.signup-form input {
+   width: 100%;
+   padding: 5px;
+   margin-top: 10px;
+   border: 1px solid #777777;
+   box-sizing: border-box;
+   border-radius: 4px;
+}
+.signup-form input:focus {
+   box-shadow: 0 0 0 0;
+   outline: 0;
+}
+.signup-form button {
+   margin: 20px 0 0 auto;
+   width: 111px;
+   height: 33px;
+   align-items: center;
+   justify-content: center;
+   margin-right: 0;
+   cursor: pointer;
+   color: #FFF;
+   background: #000000;
+}

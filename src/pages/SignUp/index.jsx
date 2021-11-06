@@ -5,12 +5,22 @@ import React from 'react';
 export default function SignUp() {
    const [username, setUserName] = React.useState();
    return (
-      <div className="signup-root">
+      <div className="signup-ROOT">
          <div className="signup-form">
-            <h2>Welcome to CodeLeap network!</h2>
+            <div className="signup-form-text">
+               <h2>Welcome to CodeLeap network!</h2>
 
-            <h4>Please enter your username</h4>
-            
+               <h4>Please enter your username</h4>
+               <input 
+                  value={username}
+                  placeholder="John doe"
+                  onChange={e => setUserName(e.target.value)}
+               />
+            </div>
+
+            <button type="button">
+               ENTER
+            </button>
          </div>
       </div>
    )
