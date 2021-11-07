@@ -37,7 +37,9 @@ export default function Main() {
                </div>
             </div>
 
-            
+            <div className="main-posts">
+               <PostCard />
+            </div>
          </div>
 
       </div>

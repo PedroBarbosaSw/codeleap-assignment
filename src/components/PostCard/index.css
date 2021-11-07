@@ -1,0 +1,31 @@
+.postcard-ROOT {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+}
+
+.postcard-ROOT .postcard-content {
+   width: 70%;
+   box-sizing: border-box;
+   border: 1px solid #999999;
+}
+
+.postcard-ROOT .postcard-content .postcard-content-title {
+   padding: 15px;
+   background-size: cover;
+   background-color: #000;
+   color: #FFF;
+}
+.postcard-ROOT .postcard-content .postcard-content-title h3 {
+   margin-left: 20px;
+   font-weight: bolder;
+}
+
+.postcard-ROOT .postcard-content .postcard-content-content {
+   padding: 20px;
+}
+
+.postcard-ROOT .postcard-content .postcard-content-content p {
+   margin-top: 20px;
+}
