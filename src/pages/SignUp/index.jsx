@@ -2,6 +2,8 @@ import './index.css';
 
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 export default function SignUp() {
    const [username, setUserName] = React.useState();
    return (
@@ -18,9 +20,11 @@ export default function SignUp() {
                />
             </div>
 
-            <button type="button">
-               ENTER
-            </button>
+            <Link to={'/home'} className="signup-link">
+               <button>
+                  ENTER
+               </button>
+            </Link>
          </div>
       </div>
    )

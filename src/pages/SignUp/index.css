@@ -41,13 +41,16 @@
    box-shadow: 0 0 0 0;
    outline: 0;
 }
-.signup-form button {
+.signup-form .signup-link {
    margin: 20px 0 0 auto;
+}
+.signup-form button {
+   /* margin: 20px 0 0 auto; */
    width: 111px;
    height: 33px;
    align-items: center;
    justify-content: center;
-   margin-right: 0;
+   /* margin-right: 0; */
    cursor: pointer;
    color: #FFF;
    background: #000000;
