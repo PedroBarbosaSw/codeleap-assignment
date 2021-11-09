@@ -12,11 +12,28 @@
 }
 
 .postcard-ROOT .postcard-content .postcard-content-title {
-   padding: 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 5px;
    background-size: cover;
    background-color: #000;
    color: #FFF;
 }
+
+.icons {
+   color: #FFF;
+}
+
+.postcard-ROOT .postcard-content .postcard-content-title .postcard-content-title-icons {
+   margin-right: 15px;
+}
+
+.postcard-ROOT .postcard-content .postcard-content-title .postcard-content-title-icons *:hover{
+   background-color: #868686;
+   cursor: pointer;
+}
+
 .postcard-ROOT .postcard-content .postcard-content-title h3 {
    margin-left: 10px;
    font-weight: bolder;
@@ -24,6 +41,16 @@
 
 .postcard-ROOT .postcard-content .postcard-content-content {
    padding: 20px;
+}
+
+.postcard-ROOT .postcard-content .postcard-content-content .postcard-content-subtitle {
+   display: flex;
+   justify-content: space-between;
+}
+
+.postcard-ROOT .postcard-content .postcard-content-content .postcard-content-subtitle span {
+   color: #777777;
+  font-weight: bolder; 
 }
 
 .postcard-ROOT .postcard-content .postcard-content-content p {

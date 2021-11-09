@@ -26,9 +26,10 @@ export default function Main() {
                      />
 
                      <span>Content</span>
-                     <input 
+                     <textarea 
                         value={content}
                         placeholder="Hello world"
+                        rows="4"
                         onChange={e => setContent(e.target.value)}
                      />
                   </div>
