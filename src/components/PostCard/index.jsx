@@ -5,8 +5,20 @@ import React from 'react';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import EditIcon from '@material-ui/icons/Edit';
 import IconButton from '@material-ui/core/IconButton';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogActions from '@material-ui/core/DialogActions';
+import DialogContent from '@material-ui/core/DialogContent';
 
 export default function PostCard(props) {
+   const [openDelete, setOpenDelete] = React.useState(false);
+   const handleClickDeleteOpen = () => setOpenDelete(true);
+   const handleClickDeleteClose = () => setOpenDelete(false);
+
+   const [openEdit, setOpenEdit] = React.useState(false);
+   const handleClickEditOpen = () => setOpenEdit(true);
+   const handleClickEditClose = () => setOpenEdit(false);
+
    return (
       <div className="postcard-ROOT">
          <div className="postcard-content">
@@ -14,10 +26,10 @@ export default function PostCard(props) {
                <h3>{datatest[0].title}</h3>
 
                <div className="postcard-content-title-icons">
-                  <IconButton>
+                  <IconButton onClick={() => handleClickDeleteOpen()}>
                      <DeleteForeverIcon className="icons" />
                   </IconButton>
-                  <IconButton>
+                  <IconButton onClick={() => handleClickEditOpen()}>
                      <EditIcon className="icons" />
                   </IconButton>
                </div>
@@ -33,6 +45,34 @@ export default function PostCard(props) {
                </p>
             </div>
          </div>
+
+         <Dialog
+            open={openDelete}
+            onClose={handleClickDeleteClose}
+         >
+            <DialogTitle>
+               {"Are you sure you want to delete this item?"}
+            </DialogTitle>
+
+            <DialogActions>
+               <button type="button" className="button-dialog" >Cancel</button>
+               <button type="button" className="button-dialog" >OK</button>
+            </DialogActions>
+         </Dialog>
+
+         <Dialog
+            open={openEdit}
+            onClose={handleClickEditClose}
+         >
+            <DialogTitle>
+               {"Edit Item"}
+            </DialogTitle>
+
+            <DialogActions>
+               <button type="button" className="button-dialog" >Cancel</button>
+               <button type="button" className="button-dialog" >OK</button>
+            </DialogActions>
+         </Dialog>
       </div>
    )
 }

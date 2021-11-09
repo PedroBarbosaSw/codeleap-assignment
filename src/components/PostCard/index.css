@@ -56,3 +56,16 @@
 .postcard-ROOT .postcard-content .postcard-content-content p {
    margin-top: 20px;
 }
+
+.button-dialog {
+   cursor: pointer;
+   width: 111px;
+   height: 33px;
+   border: 1px solid #000000;
+   box-sizing: border-box;
+   background: #FFFFFF;
+}
+
+.dialog-box span{
+   padding: 20px;
+}
