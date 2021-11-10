@@ -45,13 +45,19 @@
    margin: 20px 0 0 auto;
 }
 .signup-form button {
-   /* margin: 20px 0 0 auto; */
    width: 111px;
    height: 33px;
    align-items: center;
    justify-content: center;
-   /* margin-right: 0; */
+}
+
+.signup-form .button-filled {
    cursor: pointer;
    color: #FFF;
    background: #000000;
+}
+
+.signup-form .button-notfilled {
+   color: #FFF;
+   background: #b3b3b3;
 }

@@ -5,24 +5,13 @@ import React from 'react';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import EditIcon from '@material-ui/icons/Edit';
 import IconButton from '@material-ui/core/IconButton';
-import Dialog from '@material-ui/core/Dialog';
-import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
 
 import Card from '../PostCard';
 import Modal from '../Modal';
 
 export default function PostCard(props) {
-   const [open, setOpen] = React.useState(false)
-
+   const [open, setOpen] = React.useState(false);
    const [openDelete, setOpenDelete] = React.useState(false);
-   const handleClickDeleteOpen = () => setOpenDelete(true);
-   const handleClickDeleteClose = () => setOpenDelete(false);
-
-   const [openEdit, setOpenEdit] = React.useState(false);
-   const handleClickEditOpen = () => setOpenEdit(true);
-   const handleClickEditClose = () => setOpenEdit(false);
 
    return (
       <div className="postcard-ROOT">
@@ -31,7 +20,7 @@ export default function PostCard(props) {
                <h3>{datatest[0].title}</h3>
 
                <div className="postcard-content-title-icons">
-                  <IconButton onClick={() => handleClickDeleteOpen()}>
+                  <IconButton onClick={() => setOpenDelete(true)}>
                      <DeleteForeverIcon className="icons" />
                   </IconButton>
                   <IconButton onClick={() => setOpen(true)}>
@@ -51,42 +40,13 @@ export default function PostCard(props) {
             </div>
          </div>
 
-         <Dialog
-            open={openDelete}
-            onClose={handleClickDeleteClose}
+         <Modal
+            isOpen={openDelete}
+            onClickClose={() => setOpenDelete(false)}
          >
-            <DialogTitle>
-               {"Are you sure you want to delete this item?"}
-            </DialogTitle>
 
-            <DialogActions>
-               <button type="button" className="button-dialog" >Cancel</button>
-               <button type="button" className="button-dialog" >OK</button>
-            </DialogActions>
-         </Dialog>
+         </Modal>
 
-         {/* <Dialog
-            open={openEdit}
-            onClose={handleClickEditClose}
-         >
-            <DialogTitle>
-               {"Edit Item"}
-            </DialogTitle>
-
-            <div className="dialogcontent-edit">
-               <div className="dialog-editbox">
-                  <span>Title</span>
-                  <input type="text" />
-
-                  <span>Content</span>
-                  <textarea rows="4" />
-               </div>
-            </div>
-
-            <DialogActions>
-               <button type="button" className="button-dialog">SAVE</button>
-            </DialogActions>
-         </Dialog> */}
          <Modal 
             isOpen={open} 
             onClickClose={() => setOpen(false)}

@@ -20,11 +20,21 @@ export default function SignUp() {
                />
             </div>
 
-            <Link to={'/home'} className="signup-link">
-               <button>
-                  ENTER
-               </button>
-            </Link>
+            {
+               username ? (
+                  <Link to={'/home'} className="signup-link">
+                     <button className="button-filled">
+                        ENTER
+                     </button>
+                  </Link>
+               ) : (
+                  <div className="signup-link">
+                     <button className="button-notfilled">
+                        ENTER
+                     </button>
+                  </div>
+               )
+            }
          </div>
       </div>
    )
