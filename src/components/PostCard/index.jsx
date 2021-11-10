@@ -10,7 +10,12 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 
+import Card from '../PostCard';
+import Modal from '../Modal';
+
 export default function PostCard(props) {
+   const [open, setOpen] = React.useState(false)
+
    const [openDelete, setOpenDelete] = React.useState(false);
    const handleClickDeleteOpen = () => setOpenDelete(true);
    const handleClickDeleteClose = () => setOpenDelete(false);
@@ -29,7 +34,7 @@ export default function PostCard(props) {
                   <IconButton onClick={() => handleClickDeleteOpen()}>
                      <DeleteForeverIcon className="icons" />
                   </IconButton>
-                  <IconButton onClick={() => handleClickEditOpen()}>
+                  <IconButton onClick={() => setOpen(true)}>
                      <EditIcon className="icons" />
                   </IconButton>
                </div>
@@ -60,7 +65,7 @@ export default function PostCard(props) {
             </DialogActions>
          </Dialog>
 
-         <Dialog
+         {/* <Dialog
             open={openEdit}
             onClose={handleClickEditClose}
          >
@@ -68,11 +73,42 @@ export default function PostCard(props) {
                {"Edit Item"}
             </DialogTitle>
 
+            <div className="dialogcontent-edit">
+               <div className="dialog-editbox">
+                  <span>Title</span>
+                  <input type="text" />
+
+                  <span>Content</span>
+                  <textarea rows="4" />
+               </div>
+            </div>
+
             <DialogActions>
-               <button type="button" className="button-dialog" >Cancel</button>
-               <button type="button" className="button-dialog" >OK</button>
+               <button type="button" className="button-dialog">SAVE</button>
             </DialogActions>
-         </Dialog>
+         </Dialog> */}
+         <Modal 
+            isOpen={open} 
+            onClickClose={() => setOpen(false)}
+         >
+            <div className="modal-edit">
+               <h3>Edit Item</h3>
+
+               <div className="dialogcontent-edit">
+                  <div className="dialog-editbox">
+                     <span>Title</span>
+                     <input type="text" />
+
+                     <span>Content</span>
+                     <textarea rows="4" />
+
+                     <div className="button-dialog-box">
+                        <button type="button" className="button-dialog">SAVE</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </Modal>
       </div>
    )
 }

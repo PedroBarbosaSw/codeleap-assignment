@@ -57,15 +57,43 @@
    margin-top: 20px;
 }
 
-.button-dialog {
+.button-dialog{
+   margin-top: 15px;
    cursor: pointer;
    width: 111px;
    height: 33px;
+   color: #FFF;
+   float: right;
+   font-size: 17px;
    border: 1px solid #000000;
    box-sizing: border-box;
-   background: #FFFFFF;
+   background: #000;
 }
 
-.dialog-box span{
+.button-dialog button {
+   float: right;
+}
+
+.dialog-box span {
    padding: 20px;
+}
+
+.dialogcontent-edit {
+   width: 500px;
+   padding: 20px;
+}
+
+.dialog-editbox {
+   display: flex;
+   flex-direction: column;
+
+} 
+
+.dialog-editbox input, textarea {
+   width: 100%;
+   border: 1px solid #777777;
+   box-sizing: border-box;
+   border-radius: 4px;
+   padding: 5px 5px 5px 8px;
+   margin: 8px 0px;
 }
