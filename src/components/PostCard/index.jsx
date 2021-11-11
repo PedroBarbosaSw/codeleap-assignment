@@ -5,6 +5,9 @@ import React from 'react';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import EditIcon from '@material-ui/icons/Edit';
 import IconButton from '@material-ui/core/IconButton';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogActions from '@material-ui/core/DialogActions';
 
 import Card from '../PostCard';
 import Modal from '../Modal';
@@ -12,6 +15,13 @@ import Modal from '../Modal';
 export default function PostCard(props) {
    const [open, setOpen] = React.useState(false);
    const [openDelete, setOpenDelete] = React.useState(false);
+
+   // const handleClickDeleteOpen = () => setOpenDelete(true);
+   // const handleClickDeleteClose = () => setOpenDelete(false);
+
+   // const [openEdit, setOpenEdit] = React.useState(false);
+   // const handleClickEditOpen = () => setOpenEdit(true);
+   // const handleClickEditClose = () => setOpenEdit(false);
 
    return (
       <div className="postcard-ROOT">
@@ -44,7 +54,18 @@ export default function PostCard(props) {
             isOpen={openDelete}
             onClickClose={() => setOpenDelete(false)}
          >
+            <div className="modal-delete">
+               <h3>Are you sure you want to delet this item?</h3>
 
+               <div className="modal-delete-buttons">
+                  <button type="button" className="button-dialog-delete" >Cancel</button>
+                  <button 
+                     type="button" 
+                     className="button-dialog-delete"
+                     style={{marginRight:'15px'}}   
+                  >OK</button>
+               </div>
+            </div>
          </Modal>
 
          <Modal 

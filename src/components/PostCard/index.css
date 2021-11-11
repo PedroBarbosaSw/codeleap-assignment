@@ -57,17 +57,33 @@
    margin-top: 20px;
 }
 
-.button-dialog{
-   margin-top: 15px;
+.modal-delete {
+   width: 50vw;
+   height: 100px;
+}
+
+.button-dialog, .button-dialog-delete {
    cursor: pointer;
    width: 111px;
    height: 33px;
-   color: #FFF;
    float: right;
    font-size: 17px;
+}
+
+.button-dialog {
+   margin-top: 15px;
+   color: #FFF;
    border: 1px solid #000000;
    box-sizing: border-box;
    background: #000;
+}
+
+.button-dialog-delete {
+   margin-top: 50px;
+   color: #000;
+   background: #FFFFFF;
+   border: 1px solid #000000;
+   box-sizing: border-box;
 }
 
 .button-dialog button {
