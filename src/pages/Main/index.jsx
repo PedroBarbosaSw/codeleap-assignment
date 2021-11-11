@@ -5,9 +5,19 @@ import React from 'react';
 import Header from '../../components/Header';
 import PostCard from '../../components/PostCard';
 
+import axios from 'axios';
+
 export default function Main() {
    const [title, setTitle] = React.useState();
    const [content, setContent] = React.useState();
+
+   const [posts, setPosts] = React.useState([])
+
+   React.useEffect(function() {
+      const URL_GET_POSTS = 'https://dev.codeleap.co.uk/careers/'
+      axios.get(URL_GET_POSTS)
+      .then(res => setPosts(res.data))
+   }, [])
 
    return (
       <div className="main-ROOT">
@@ -39,7 +49,15 @@ export default function Main() {
             </div>
 
             <div className="main-posts">
-               <PostCard />
+               <ul>
+                  {
+                     posts?.results.map(currentPost => (
+                        <li style={{margin: '25px 0'}}>
+                           <PostCard post={currentPost} />
+                        </li>
+                     ))
+                  }
+               </ul>
             </div>
          </div>
 

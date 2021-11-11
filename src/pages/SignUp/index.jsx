@@ -5,7 +5,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function SignUp() {
-   const [username, setUserName] = React.useState();
+   const [username, setUserName] = React.useState('Example name');
+
    return (
       <div className="signup-ROOT">
          <div className="signup-form">
