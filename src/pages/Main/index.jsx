@@ -4,20 +4,15 @@ import React from 'react';
 
 import Header from '../../components/Header';
 import PostCard from '../../components/PostCard';
+import { changeTitle, changeContent} from '../../actions/postAction';
 
-import axios from 'axios';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-export default function Main() {
-   const [title, setTitle] = React.useState();
-   const [content, setContent] = React.useState();
+function Main(props) {
+   const posts = props.posts || []
 
-   const [posts, setPosts] = React.useState([])
-
-   React.useEffect(function() {
-      const URL_GET_POSTS = 'https://dev.codeleap.co.uk/careers/'
-      axios.get(URL_GET_POSTS)
-      .then(res => setPosts(res.data))
-   }, [])
+   console.log('posts: ', posts)
 
    return (
       <div className="main-ROOT">
@@ -30,17 +25,17 @@ export default function Main() {
                      <h3>What's on your mind?</h3>
                      <span>Title</span>
                      <input 
-                        value={title}
+                        value={props.title}
                         placeholder="Hello world"
-                        onChange={e => setTitle(e.target.value)}
+                        onChange={e => props.changeTitle(e)}
                      />
 
                      <span>Content</span>
                      <textarea 
-                        value={content}
+                        value={props.content}
                         placeholder="Hello world"
                         rows="4"
-                        onChange={e => setContent(e.target.value)}
+                        onChange={e => props.changeContent(e)}
                      />
                   </div>
 
@@ -51,11 +46,11 @@ export default function Main() {
             <div className="main-posts">
                <ul>
                   {
-                     posts?.results.map(currentPost => (
-                        <li style={{margin: '25px 0'}}>
-                           <PostCard post={currentPost} />
-                        </li>
-                     ))
+                     // posts?.data.map(currentPost => (
+                     //    <li style={{margin: '25px 0'}}>
+                     //       <PostCard post={currentPost} />
+                     //    </li>
+                     // ))
                   }
                </ul>
             </div>
@@ -64,3 +59,16 @@ export default function Main() {
       </div>
    )
 }
+
+const mapStateToProps = state => (
+   {
+      posts: state.posts.posts, 
+      title: state.posts.title,
+      content: state.posts.content
+   }
+)
+
+const mapDispatchToProps = dispatch =>
+   bindActionCreators({ changeTitle, changeContent }, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Main)
