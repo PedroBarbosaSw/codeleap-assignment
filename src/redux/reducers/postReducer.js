@@ -1,4 +1,5 @@
 const INITIAL_STATE = {
+   username: '',
    title: '',
    content: '',
    posts: []
@@ -16,6 +17,8 @@ export default (state = INITIAL_STATE, action) => {
          return { ...state, posts: action.payload.data.results}
       case 'POST_ADDED':
          return { ...state, title: '', content: ''}
+      case 'CHANGE_USERNAME':
+         return { ...state, username: action.payload}
       default:
          return state
    }

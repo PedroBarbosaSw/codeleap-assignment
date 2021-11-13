@@ -4,9 +4,11 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-export default function SignUp() {
-   const [username, setUserName] = React.useState('Example name');
+import { changeUsername } from '../../actions/postAction';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
+function SignUp(props) {
    return (
       <div className="signup-ROOT">
          <div className="signup-form">
@@ -15,14 +17,14 @@ export default function SignUp() {
 
                <h4>Please enter your username</h4>
                <input 
-                  value={username}
+                  value={props.username}
                   placeholder="John doe"
-                  onChange={e => setUserName(e.target.value)}
+                  onChange={e => props.changeUsername(e.target.value)}
                />
             </div>
 
             {
-               username ? (
+               props.username ? (
                   <Link to={'/home'} className="signup-link">
                      <button className="button-filled">
                         ENTER
@@ -40,3 +42,15 @@ export default function SignUp() {
       </div>
    )
 }
+
+const mapStateToProps = state => (
+   {
+      username: state.posts.username
+   }
+)
+
+const mapDispatchToProps = dispatch =>
+   bindActionCreators({ changeUsername }, dispatch)
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp)

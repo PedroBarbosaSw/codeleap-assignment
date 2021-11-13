@@ -14,9 +14,9 @@ import { connect } from 'react-redux';
 function Main(props) {
    const posts = props.posts || []
 
-   React.useEffect(() => {
+   React.useEffect(function() {
       axios.get('https://dev.codeleap.co.uk/careers/')
-      .then(res => props.changePosts(res))
+         .then(res => props.changePosts(res))
    }, [])
 
    return (
@@ -47,7 +47,7 @@ function Main(props) {
                   <button 
                      type="button"
                      onClick={() => props.addPost({
-                           username: 'teste', 
+                           username: props.username,
                            title: props.title, 
                            content: props.content
                      })}
@@ -76,6 +76,7 @@ function Main(props) {
 
 const mapStateToProps = state => (
    {
+      username: state.posts.username, 
       posts: state.posts.posts, 
       title: state.posts.title,
       content: state.posts.content

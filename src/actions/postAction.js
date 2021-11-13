@@ -32,3 +32,8 @@ export const addPost = (post) => {
          .then(res => dispatch(refreshPosts()))
    }
 }
+
+export const changeUsername = (user) => ({
+   type: 'CHANGE_USERNAME',
+   payload: user
+})
