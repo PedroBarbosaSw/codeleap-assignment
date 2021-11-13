@@ -7,7 +7,7 @@ import PostCard from '../../components/PostCard';
 
 import axios from 'axios';
 
-import { changeTitle, changeContent, changePosts} from '../../actions/postAction';
+import { changeTitle, changeContent, changePosts, addPost} from '../../actions/postAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
@@ -18,8 +18,6 @@ function Main(props) {
       axios.get('https://dev.codeleap.co.uk/careers/')
       .then(res => props.changePosts(res))
    }, [])
-
-   console.log(posts)
 
    return (
       <div className="main-ROOT">
@@ -46,8 +44,13 @@ function Main(props) {
                      />
                   </div>
 
-                  <button type="button"
-
+                  <button 
+                     type="button"
+                     onClick={() => props.addPost({
+                           username: 'teste', 
+                           title: props.title, 
+                           content: props.content
+                     })}
                   >
                      CREATE
                   </button>
@@ -80,6 +83,6 @@ const mapStateToProps = state => (
 )
 
 const mapDispatchToProps = dispatch =>
-   bindActionCreators({ changeTitle, changeContent, changePosts }, dispatch)
+   bindActionCreators({ changeTitle, changeContent, changePosts, addPost }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main)

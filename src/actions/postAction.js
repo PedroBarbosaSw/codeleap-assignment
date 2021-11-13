@@ -12,9 +12,23 @@ export const changeContent = (event) => ({
    payload: event.target.value
 })
 
-export const changePosts = (list) => {
+export const changePosts = (list) => ({
+   type: 'POSTS_CHANGED',
+   payload: list
+})
+
+export const refreshPosts = () => {
+   const request = axios.get(URL)
    return {
-      type: 'POSTS_CHANGED',
-      payload: list
+      type: 'POSTS_REFRESH',
+      payload: request
+   }
+}
+
+export const addPost = ({post}) => {
+   return dispatch => {
+      axios.post(URL, { post })
+         .then(res => dispatch({ type: 'POST_ADDED', payload: res.data.results }))
+         .then(res => dispatch(refreshPosts()))
    }
 }

@@ -12,6 +12,10 @@ export default (state = INITIAL_STATE, action) => {
          return { ...state, title: action.payload}
       case 'CONTENT_CHANGED':
          return { ...state, content: action.payload}
+      case 'POSTS_REFRESH':
+         return { ...state, posts: action.payload.data.results}
+      case 'POST_ADDED':
+         return { ...state, title: '', content: ''}
       default:
          return state
    }

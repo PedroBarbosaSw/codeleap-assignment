@@ -5515,6 +5515,13 @@
     "inherits" "^2.0.3"
     "readable-stream" "^2.3.6"
 
+"flux-standard-action@^0.6.1":
+  "integrity" "sha1-bzQhG5SDTqHDzDD056+tPQ+/caI="
+  "resolved" "https://registry.npmjs.org/flux-standard-action/-/flux-standard-action-0.6.1.tgz"
+  "version" "0.6.1"
+  dependencies:
+    "lodash.isplainobject" "^3.2.0"
+
 "follow-redirects@^1.0.0", "follow-redirects@^1.14.4":
   "integrity" "sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA=="
   "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.14.5.tgz"
@@ -7610,6 +7617,11 @@
   dependencies:
     "p-locate" "^4.1.0"
 
+"lodash._basefor@^3.0.0":
+  "integrity" "sha1-dVC06SGO8J+tJDQ7YSAhx5tMIMI="
+  "resolved" "https://registry.npmjs.org/lodash._basefor/-/lodash._basefor-3.0.3.tgz"
+  "version" "3.0.3"
+
 "lodash._reinterpolate@^3.0.0":
   "integrity" "sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0="
   "resolved" "https://registry.npmjs.org/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz"
@@ -7619,6 +7631,33 @@
   "integrity" "sha1-gteb/zCmfEAF/9XiUVMArZyk168="
   "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
   "version" "4.0.8"
+
+"lodash.isarguments@^3.0.0":
+  "integrity" "sha1-L1c9hcaiQon/AGY7SRwdM4/zRYo="
+  "resolved" "https://registry.npmjs.org/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz"
+  "version" "3.1.0"
+
+"lodash.isarray@^3.0.0":
+  "integrity" "sha1-eeTriMNqgSKvhvhEqpvNhRtfu1U="
+  "resolved" "https://registry.npmjs.org/lodash.isarray/-/lodash.isarray-3.0.4.tgz"
+  "version" "3.0.4"
+
+"lodash.isplainobject@^3.2.0":
+  "integrity" "sha1-moI4rhayAEMpYM1zRlEtASP79MU="
+  "resolved" "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-3.2.0.tgz"
+  "version" "3.2.0"
+  dependencies:
+    "lodash._basefor" "^3.0.0"
+    "lodash.isarguments" "^3.0.0"
+    "lodash.keysin" "^3.0.0"
+
+"lodash.keysin@^3.0.0":
+  "integrity" "sha1-IsRJPrvtsUJ5YqVLRFssinZ/tH8="
+  "resolved" "https://registry.npmjs.org/lodash.keysin/-/lodash.keysin-3.0.8.tgz"
+  "version" "3.0.8"
+  dependencies:
+    "lodash.isarguments" "^3.0.0"
+    "lodash.isarray" "^3.0.0"
 
 "lodash.memoize@^4.1.2":
   "integrity" "sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4="
@@ -8064,6 +8103,13 @@
   "integrity" "sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg=="
   "resolved" "https://registry.npmjs.org/ms/-/ms-2.1.1.tgz"
   "version" "2.1.1"
+
+"multi@^0.1.3":
+  "integrity" "sha1-WvemD+ZgsBG3wB5SZXSa7Wob8h8="
+  "resolved" "https://registry.npmjs.org/multi/-/multi-0.1.3.tgz"
+  "version" "0.1.3"
+  dependencies:
+    "underscore" "1.5.1"
 
 "multicast-dns-service-types@^1.1.0":
   "integrity" "sha1-iZ8R2WhuXgXLkbNdXw5jt3PPyQE="
@@ -10081,6 +10127,23 @@
     "indent-string" "^4.0.0"
     "strip-indent" "^3.0.0"
 
+"redux-multi@^0.1.12":
+  "integrity" "sha1-KOH+XklnLLxb2KB/Cyrq8O+DVcI="
+  "resolved" "https://registry.npmjs.org/redux-multi/-/redux-multi-0.1.12.tgz"
+  "version" "0.1.12"
+
+"redux-promise@^0.5.3":
+  "integrity" "sha1-6X5snTvzdurLebq+bZBtogES1tg="
+  "resolved" "https://registry.npmjs.org/redux-promise/-/redux-promise-0.5.3.tgz"
+  "version" "0.5.3"
+  dependencies:
+    "flux-standard-action" "^0.6.1"
+
+"redux-thunk@^2.2.0":
+  "integrity" "sha1-5hWhbha0ehmlFXZhM9Hj6Zt4UuU="
+  "resolved" "https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.2.0.tgz"
+  "version" "2.2.0"
+
 "redux@^4.0.0", "redux@^4.1.2":
   "integrity" "sha512-SH8PglcebESbd/shgf6mii6EIoRM0zrQyjcuQ+ojmfxjTtE0z9Y8pa62iA/OJ58qjP6j27uyW4kUF4jl/jd6sw=="
   "resolved" "https://registry.npmjs.org/redux/-/redux-4.1.2.tgz"
@@ -11720,6 +11783,11 @@
     "has-bigints" "^1.0.1"
     "has-symbols" "^1.0.2"
     "which-boxed-primitive" "^1.0.2"
+
+"underscore@1.5.1":
+  "integrity" "sha1-0r3oF9F2/63olKtxRY5oKhS4bck="
+  "resolved" "https://registry.npmjs.org/underscore/-/underscore-1.5.1.tgz"
+  "version" "1.5.1"
 
 "unicode-canonical-property-names-ecmascript@^2.0.0":
   "integrity" "sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ=="
