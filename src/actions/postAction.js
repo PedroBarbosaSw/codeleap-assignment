@@ -33,6 +33,13 @@ export const addPost = (post) => {
    }
 }
 
+export const removePost = (postId) => {
+   return dispatch => {
+      axios.delete(`${URL}${postId}/`)
+         .then(res => dispatch(refreshPosts()))
+   }
+}
+
 export const changeUsername = (user) => ({
    type: 'CHANGE_USERNAME',
    payload: user

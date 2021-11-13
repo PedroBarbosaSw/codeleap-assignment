@@ -58,10 +58,7 @@ function Main(props) {
                            CREATE
                         </button>
                      ) : (
-                        <button 
-                           type="button"
-                           className="button-notfilled"
-                        >
+                        <button type="button" className="button-notfilled">
                            CREATE
                         </button>
                      )
