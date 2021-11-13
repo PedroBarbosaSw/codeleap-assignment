@@ -25,9 +25,9 @@ export const refreshPosts = () => {
    }
 }
 
-export const addPost = ({post}) => {
+export const addPost = (post) => {
    return dispatch => {
-      axios.post(URL, { post })
+      axios.post(URL, { username: post.username, title: post.title, content: post.content })
          .then(res => dispatch({ type: 'POST_ADDED', payload: res.data.results }))
          .then(res => dispatch(refreshPosts()))
    }
