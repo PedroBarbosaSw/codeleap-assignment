@@ -8,13 +8,16 @@ import EditIcon from '@material-ui/icons/Edit';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { removePost } from '../../actions/postAction';
+import { removePost, editPost } from '../../actions/postAction';
 
 import Modal from '../Modal';
 
 function PostCard(props) {
    const [open, setOpen] = React.useState(false);
    const [openDelete, setOpenDelete] = React.useState(false);
+
+   const [titleEditItem, setTitleEditIcon] = React.useState(props.post.title)
+   const [contentEditItem, setContentEditIcon] = React.useState(props.post.content)
 
    return (
       <div className="postcard-ROOT">
@@ -89,13 +92,28 @@ function PostCard(props) {
                <div className="dialogcontent-edit">
                   <div className="dialog-editbox">
                      <span>Title</span>
-                     <input type="text" />
+                     <input 
+                        value={titleEditItem}
+                        onChange={e => setTitleEditIcon(e.target.value)}
+                     />
 
                      <span>Content</span>
-                     <textarea rows="4" />
+                     <textarea 
+                        value={contentEditItem}
+                        onChange={e => setContentEditIcon(e.target.value)}
+                        rows="4" 
+                     />
 
                      <div className="button-dialog-box">
-                        <button type="button" className="button-dialog">
+                        <button 
+                           type="button" 
+                           className="button-dialog"
+                           onClick={() => props.editPost({
+                              id: props.post.id,
+                              title: titleEditItem,
+                              content: contentEditItem
+                           })}
+                        >
                            SAVE
                         </button>
                      </div>
@@ -109,6 +127,6 @@ function PostCard(props) {
 
 const mapStateToProps = state => ({username: state.posts.username})
 
-const mapDispatchToProps = dispatch => bindActionCreators({ removePost }, dispatch)
+const mapDispatchToProps = dispatch => bindActionCreators({ removePost, editPost }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostCard)

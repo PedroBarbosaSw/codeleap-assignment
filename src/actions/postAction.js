@@ -40,6 +40,16 @@ export const removePost = (postId) => {
    }
 }
 
+export const editPost = (post) => {
+   return dispatch => {
+      axios.patch(`${URL}${post.id}/`, {
+         title: post.title,
+         content: post.content
+      })
+         .then(res => dispatch(refreshPosts()))
+   }
+}
+
 export const changeUsername = (user) => ({
    type: 'CHANGE_USERNAME',
    payload: user

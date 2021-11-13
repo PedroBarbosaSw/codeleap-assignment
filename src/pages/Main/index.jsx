@@ -31,14 +31,14 @@ function Main(props) {
                      <span>Title</span>
                      <input 
                         value={props.title}
-                        placeholder="Hello world"
+                        placeholder="e.g. Hello world"
                         onChange={e => props.changeTitle(e)}
                      />
 
                      <span>Content</span>
                      <textarea 
                         value={props.content}
-                        placeholder="Hello world"
+                        placeholder="e.g. Hello world"
                         rows="4"
                         onChange={e => props.changeContent(e)}
                      />
