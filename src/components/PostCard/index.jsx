@@ -5,6 +5,8 @@ import React from 'react';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import EditIcon from '@material-ui/icons/Edit';
 
+import { formatDistanceToNow } from 'date-fns';
+
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
@@ -47,7 +49,7 @@ function PostCard(props) {
             <div className="postcard-content-content">
                <div className="postcard-content-subtitle">
                   <h4>{props.post.username}</h4>
-                  {/* <span>{props.post.created_datetime - timestamp}</span> */}
+                  <span>{formatDistanceToNow(new Date(props.post.created_datetime), { addSuffix: true }) }</span>
                </div>
                <p>
                   {props.post.content}
