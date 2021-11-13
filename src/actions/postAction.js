@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const URL = 'https://api.github.com/users/pedrobarbosasw/followers'
+const URL = 'https://dev.codeleap.co.uk/careers/'
 
 export const changeTitle = (event) => ({
    type: 'TITLE_CHANGED',
@@ -12,10 +12,9 @@ export const changeContent = (event) => ({
    payload: event.target.value
 })
 
-export const getPosts = () => {
-   const request = axios.get(URL)
+export const changePosts = (list) => {
    return {
-      type: 'POSTS_GET',
-      payload: request
+      type: 'POSTS_CHANGED',
+      payload: list
    }
 }

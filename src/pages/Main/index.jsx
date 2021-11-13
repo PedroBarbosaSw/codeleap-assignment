@@ -4,15 +4,22 @@ import React from 'react';
 
 import Header from '../../components/Header';
 import PostCard from '../../components/PostCard';
-import { changeTitle, changeContent} from '../../actions/postAction';
 
+import axios from 'axios';
+
+import { changeTitle, changeContent, changePosts} from '../../actions/postAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 function Main(props) {
    const posts = props.posts || []
 
-   console.log('posts: ', posts)
+   React.useEffect(() => {
+      axios.get('https://dev.codeleap.co.uk/careers/')
+      .then(res => props.changePosts(res))
+   }, [])
+
+   console.log(posts)
 
    return (
       <div className="main-ROOT">
@@ -39,18 +46,22 @@ function Main(props) {
                      />
                   </div>
 
-                  <button type="button">CREATE</button>
+                  <button type="button"
+
+                  >
+                     CREATE
+                  </button>
                </div>
             </div>
 
             <div className="main-posts">
                <ul>
                   {
-                     // posts?.data.map(currentPost => (
-                     //    <li style={{margin: '25px 0'}}>
-                     //       <PostCard post={currentPost} />
-                     //    </li>
-                     // ))
+                     posts?.map(currentPost => (
+                        <li style={{margin: '25px 0'}} key={currentPost.id}>
+                           <PostCard post={currentPost} />
+                        </li>
+                     ))
                   }
                </ul>
             </div>
@@ -69,6 +80,6 @@ const mapStateToProps = state => (
 )
 
 const mapDispatchToProps = dispatch =>
-   bindActionCreators({ changeTitle, changeContent }, dispatch)
+   bindActionCreators({ changeTitle, changeContent, changePosts }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main)
