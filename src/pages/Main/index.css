@@ -55,7 +55,22 @@
    align-items: center;
    justify-content: center;
    float: right;
+}
+
+.main-form-content button {
+   width: 111px;
+   height: 33px;
+   align-items: center;
+   justify-content: center;
+}
+
+.main-form-content .button-filled {
    cursor: pointer;
    color: #FFF;
    background: #000000;
+}
+
+.main-form-content .button-notfilled {
+   color: #FFF;
+   background: #b3b3b3;
 }

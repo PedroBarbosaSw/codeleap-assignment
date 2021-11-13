@@ -44,16 +44,28 @@ function Main(props) {
                      />
                   </div>
 
-                  <button 
-                     type="button"
-                     onClick={() => props.addPost({
-                           username: props.username,
-                           title: props.title, 
-                           content: props.content
-                     })}
-                  >
-                     CREATE
-                  </button>
+                  {
+                     props.title && props.content ? (
+                        <button 
+                           type="button"
+                           onClick={() => props.addPost({
+                                 username: props.username,
+                                 title: props.title, 
+                                 content: props.content
+                           })}
+                           className="button-filled"
+                        >
+                           CREATE
+                        </button>
+                     ) : (
+                        <button 
+                           type="button"
+                           className="button-notfilled"
+                        >
+                           CREATE
+                        </button>
+                     )
+                  }
                </div>
             </div>
 

@@ -52,7 +52,9 @@ export default function PostCard(props) {
                      type="button" 
                      className="button-dialog-delete"
                      style={{marginRight:'15px'}}   
-                  >OK</button>
+                  >
+                     OK
+                  </button>
                </div>
             </div>
          </Modal>
