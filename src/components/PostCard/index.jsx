@@ -21,6 +21,16 @@ function PostCard(props) {
    const [titleEditItem, setTitleEditIcon] = React.useState(props.post.title)
    const [contentEditItem, setContentEditIcon] = React.useState(props.post.content)
 
+   function editItem() {
+      props.editPost({
+         id: props.post.id,
+         title: titleEditItem,
+         content: contentEditItem
+      })
+
+      setOpen(false)
+   }
+
    return (
       <div className="postcard-ROOT">
          <div className="postcard-content">
@@ -110,11 +120,12 @@ function PostCard(props) {
                         <button 
                            type="button" 
                            className="button-dialog"
-                           onClick={() => props.editPost({
-                              id: props.post.id,
-                              title: titleEditItem,
-                              content: contentEditItem
-                           })}
+                           // onClick={() => props.editPost({
+                           //    id: props.post.id,
+                           //    title: titleEditItem,
+                           //    content: contentEditItem
+                           // })}
+                           onClick={() => editItem()}
                         >
                            SAVE
                         </button>
