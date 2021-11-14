@@ -7,7 +7,7 @@ import PostCard from '../../components/PostCard';
 
 import axios from 'axios';
 
-import { changeTitle, changeContent, changePosts, addPost} from '../../actions/postAction';
+import { changeTitle, changeContent, changePosts, addPost } from '../../actions/postAction';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
