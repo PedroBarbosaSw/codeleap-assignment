@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
 .postcard-ROOT {
    display: flex;
    align-items: center;
@@ -61,6 +63,16 @@
    height: 100px;
 }
 
+.modal-delete h3 {
+   font-family: 'Roboto', sans-serif;
+   font-weight: bolder;
+}
+
+.modal-delete button {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 1000;
+}
+
 .button-dialog, .button-dialog-delete {
    cursor: pointer;
    width: 111px;
@@ -91,6 +103,11 @@
 
 .dialog-box span {
    padding: 20px;
+}
+
+.modal-edit, .modal-edit button, .modal-edit input, .modal-edit textarea {
+   font-family: 'Roboto', sans-serif;
+   font-weight: bolder;
 }
 
 .dialogcontent-edit {

@@ -48,7 +48,7 @@ function PostCard(props) {
 
             <div className="postcard-content-content">
                <div className="postcard-content-subtitle">
-                  <h4>{props.post.username}</h4>
+                  <h4>@{props.post.username}</h4>
                   <span>{formatDistanceToNow(new Date(props.post.created_datetime), { addSuffix: true }) }</span>
                </div>
                <p>
