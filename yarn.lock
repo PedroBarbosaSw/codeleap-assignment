@@ -8199,13 +8199,6 @@
   "resolved" "https://registry.npmjs.org/ms/-/ms-2.1.1.tgz"
   "version" "2.1.1"
 
-"multi@^0.1.3":
-  "integrity" "sha1-WvemD+ZgsBG3wB5SZXSa7Wob8h8="
-  "resolved" "https://registry.npmjs.org/multi/-/multi-0.1.3.tgz"
-  "version" "0.1.3"
-  dependencies:
-    "underscore" "1.5.1"
-
 "multicast-dns-service-types@^1.1.0":
   "integrity" "sha1-iZ8R2WhuXgXLkbNdXw5jt3PPyQE="
   "resolved" "https://registry.npmjs.org/multicast-dns-service-types/-/multicast-dns-service-types-1.1.0.tgz"
@@ -11989,11 +11982,6 @@
     "has-bigints" "^1.0.1"
     "has-symbols" "^1.0.2"
     "which-boxed-primitive" "^1.0.2"
-
-"underscore@1.5.1":
-  "integrity" "sha1-0r3oF9F2/63olKtxRY5oKhS4bck="
-  "resolved" "https://registry.npmjs.org/underscore/-/underscore-1.5.1.tgz"
-  "version" "1.5.1"
 
 "unicode-canonical-property-names-ecmascript@^2.0.0":
   "integrity" "sha512-yY5PpDlfVIU5+y/BSCxAJRBIS1Zc2dDG3Ujq+sR0U+JjUevW2JhocOF+soROYDSaAezOzOKuyyixhD6mBknSmQ=="
