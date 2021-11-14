@@ -5545,12 +5545,13 @@
     "inherits" "^2.0.3"
     "readable-stream" "^2.3.6"
 
-"flux-standard-action@^0.6.1":
-  "integrity" "sha1-bzQhG5SDTqHDzDD056+tPQ+/caI="
-  "resolved" "https://registry.npmjs.org/flux-standard-action/-/flux-standard-action-0.6.1.tgz"
-  "version" "0.6.1"
+"flux-standard-action@^2.0.3":
+  "integrity" "sha512-7vdgawlphCjzaMLdpZv8hlGC/FJCXu6sqE3Wuqe3HLZ22KcDiO4IFplxLDePDhEt6hgCrugt45RoUObuzZP6Kg=="
+  "resolved" "https://registry.npmjs.org/flux-standard-action/-/flux-standard-action-2.1.2.tgz"
+  "version" "2.1.2"
   dependencies:
-    "lodash.isplainobject" "^3.2.0"
+    "lodash.isplainobject" "^4.0.6"
+    "lodash.isstring" "^4.0.1"
 
 "follow-redirects@^1.0.0", "follow-redirects@^1.14.4":
   "integrity" "sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA=="
@@ -6691,6 +6692,11 @@
   "resolved" "https://registry.npmjs.org/is-potential-custom-element-name/-/is-potential-custom-element-name-1.0.1.tgz"
   "version" "1.0.1"
 
+"is-promise@^2.1.0":
+  "integrity" "sha512-+lP4/6lKUBfQjZ2pdxThZvLUAafmZb8OAxFb8XXtiQmS35INgr85hdOGoEs124ez1FCnZJt6jau/T+alh58QFQ=="
+  "resolved" "https://registry.npmjs.org/is-promise/-/is-promise-2.2.2.tgz"
+  "version" "2.2.2"
+
 "is-regex@^1.0.4":
   "integrity" "sha512-vlKW17SNq44owv5AQR3Cq0bQPEb8+kF3UKZ2fiZNOWtztYE5i0CzCZxFDwO58qAOWtxdBRVO/V5Qin1wjCqFYQ=="
   "resolved" "https://registry.npmjs.org/is-regex/-/is-regex-1.0.5.tgz"
@@ -7693,11 +7699,6 @@
   dependencies:
     "p-locate" "^4.1.0"
 
-"lodash._basefor@^3.0.0":
-  "integrity" "sha1-dVC06SGO8J+tJDQ7YSAhx5tMIMI="
-  "resolved" "https://registry.npmjs.org/lodash._basefor/-/lodash._basefor-3.0.3.tgz"
-  "version" "3.0.3"
-
 "lodash._reinterpolate@^3.0.0":
   "integrity" "sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0="
   "resolved" "https://registry.npmjs.org/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz"
@@ -7708,32 +7709,15 @@
   "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
   "version" "4.0.8"
 
-"lodash.isarguments@^3.0.0":
-  "integrity" "sha1-L1c9hcaiQon/AGY7SRwdM4/zRYo="
-  "resolved" "https://registry.npmjs.org/lodash.isarguments/-/lodash.isarguments-3.1.0.tgz"
-  "version" "3.1.0"
+"lodash.isplainobject@^4.0.6":
+  "integrity" "sha1-fFJqUtibRcRcxpC4gWO+BJf1UMs="
+  "resolved" "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz"
+  "version" "4.0.6"
 
-"lodash.isarray@^3.0.0":
-  "integrity" "sha1-eeTriMNqgSKvhvhEqpvNhRtfu1U="
-  "resolved" "https://registry.npmjs.org/lodash.isarray/-/lodash.isarray-3.0.4.tgz"
-  "version" "3.0.4"
-
-"lodash.isplainobject@^3.2.0":
-  "integrity" "sha1-moI4rhayAEMpYM1zRlEtASP79MU="
-  "resolved" "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-3.2.0.tgz"
-  "version" "3.2.0"
-  dependencies:
-    "lodash._basefor" "^3.0.0"
-    "lodash.isarguments" "^3.0.0"
-    "lodash.keysin" "^3.0.0"
-
-"lodash.keysin@^3.0.0":
-  "integrity" "sha1-IsRJPrvtsUJ5YqVLRFssinZ/tH8="
-  "resolved" "https://registry.npmjs.org/lodash.keysin/-/lodash.keysin-3.0.8.tgz"
-  "version" "3.0.8"
-  dependencies:
-    "lodash.isarguments" "^3.0.0"
-    "lodash.isarray" "^3.0.0"
+"lodash.isstring@^4.0.1":
+  "integrity" "sha1-1SfftUVuynzJu5XV2ur4i6VKVFE="
+  "resolved" "https://registry.npmjs.org/lodash.isstring/-/lodash.isstring-4.0.1.tgz"
+  "version" "4.0.1"
 
 "lodash.memoize@^4.1.2":
   "integrity" "sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4="
@@ -10303,19 +10287,20 @@
   "resolved" "https://registry.npmjs.org/redux-multi/-/redux-multi-0.1.12.tgz"
   "version" "0.1.12"
 
-"redux-promise@^0.5.3":
-  "integrity" "sha1-6X5snTvzdurLebq+bZBtogES1tg="
-  "resolved" "https://registry.npmjs.org/redux-promise/-/redux-promise-0.5.3.tgz"
-  "version" "0.5.3"
+"redux-promise@^0.6.0":
+  "integrity" "sha512-R2mGxJbPFgXyCNbFDE6LjTZhCEuACF54g1bxld3nqBhnRMX0OsUyWk77moF7UMGkUdl5WOAwc4BC5jOd1dunqQ=="
+  "resolved" "https://registry.npmjs.org/redux-promise/-/redux-promise-0.6.0.tgz"
+  "version" "0.6.0"
   dependencies:
-    "flux-standard-action" "^0.6.1"
+    "flux-standard-action" "^2.0.3"
+    "is-promise" "^2.1.0"
 
-"redux-thunk@^2.2.0":
-  "integrity" "sha1-5hWhbha0ehmlFXZhM9Hj6Zt4UuU="
-  "resolved" "https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.2.0.tgz"
-  "version" "2.2.0"
+"redux-thunk@^2.4.0":
+  "integrity" "sha512-/y6ZKQNU/0u8Bm7ROLq9Pt/7lU93cT0IucYMrubo89ENjxPa7i8pqLKu6V4X7/TvYovQ6x01unTeyeZ9lgXiTA=="
+  "resolved" "https://registry.npmjs.org/redux-thunk/-/redux-thunk-2.4.0.tgz"
+  "version" "2.4.0"
 
-"redux@^4.0.0", "redux@^4.1.2":
+"redux@^4", "redux@^4.0.0", "redux@^4.1.2":
   "integrity" "sha512-SH8PglcebESbd/shgf6mii6EIoRM0zrQyjcuQ+ojmfxjTtE0z9Y8pa62iA/OJ58qjP6j27uyW4kUF4jl/jd6sw=="
   "resolved" "https://registry.npmjs.org/redux/-/redux-4.1.2.tgz"
   "version" "4.1.2"
